@@ -12,7 +12,6 @@ def chatbot():
     req = request.get_json(force=True)
     if req['queryResult']['intent']['displayName'] == 'pizza-order':
         print(req)
-        print("--------------------1")
         #return jsonify(fulfillmentText = '챗봇 접속 성공')
         return jsonify(fulfillment_messages = [
             {
@@ -37,7 +36,6 @@ def chatbot():
 
     elif req['queryResult']['intent']['displayName'] == 'pizza-order - custom':
         print(req)
-        print("--------------------2")
         return jsonify(fulfillment_messages=[
             {
                 "payload": {
